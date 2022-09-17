@@ -46,7 +46,7 @@ const App: React.FC = () => {
             <PluginsProvider>
               <LoggingProvider>
                 <GlobalStyle />
-                <Router>
+                <Router basename={process.env.PUBLIC_URL}>
                   <QueryParamProvider ReactRouterRoute={Route}>
                     {flagsReceived ? (
                       <>
